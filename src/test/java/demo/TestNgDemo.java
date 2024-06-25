@@ -65,7 +65,7 @@ public class TestNgDemo {
         driver.findElement(By.name("q")).sendKeys(searchTerm, Keys.ENTER);
         Thread.sleep(500);
         Assert.assertTrue(driver.getTitle().contains(searchTerm));
-        System.out.println("test test");
+        System.out.println("test  ");
     }
 
 
