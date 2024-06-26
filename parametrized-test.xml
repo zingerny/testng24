@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Example test suite">
+
+    <!--    suite represents the entire collection of tests that as a whole represent certain category of tests
+       such as smoke or regression test suite-->
+
+
+    <test name="1st Test">
+        <classes>
+
+
+
+            <class name="demo.ParametrizationSimple">
+                <parameter name="usr" value="duotech2883"></parameter>
+                <parameter name="pass" value="duotech123"></parameter>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="2nd Test">
+        <classes>
+
+
+
+            <class name="demo.ParametrizationSimple">
+                <parameter name="usr" value="duotech2023"></parameter>
+                <parameter name="pass" value="duotech"></parameter>
+            </class>
+
+        </classes>
+    </test>
+
+
+    <test name="3rd Test">
+        <classes>
+
+
+
+            <class name="demo.ParametrizationSimple">
+                <parameter name="usr" value="duotecoco2023"></parameter>
+                <parameter name="pass" value="duotech"></parameter>
+            </class>
+
+        </classes>
+    </test>
+
+
+</suite>
