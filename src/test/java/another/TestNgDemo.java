@@ -1,4 +1,4 @@
-package demo;
+package another;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -30,7 +30,7 @@ public class TestNgDemo {
     }
 
 
-    @Test
+    @Test(priority = 1)
     public void testGoogle() throws InterruptedException {
 
         driver.get("https://www.google.com/");
@@ -44,7 +44,7 @@ public class TestNgDemo {
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void testGoogle2() throws InterruptedException {
 
         driver.get("https://www.google.com/");
@@ -58,15 +58,14 @@ public class TestNgDemo {
 
     }
 
-    @Test
+    @Test (priority = 2)
     public void testGoogle3() throws InterruptedException {
         driver.get("https://www.google.com/");
         String searchTerm = "screen protector";
         driver.findElement(By.name("q")).sendKeys(searchTerm, Keys.ENTER);
         Thread.sleep(500);
         Assert.assertTrue(driver.getTitle().contains(searchTerm));
-        System.out.println("test TEST TESTETETSTST");
-        System.out.println("test TEST TESTETETSTST");
+
     }
 
 

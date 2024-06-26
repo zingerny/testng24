@@ -36,7 +36,7 @@ public void afterSuite(){
 
     @BeforeClass
     public void beforeClass(){
-        System.out.println("before class");
+        System.out.println("before class");// run once before everything that is in a class.
     }
 
     @AfterClass
@@ -58,7 +58,7 @@ public void afterSuite(){
 
     }
 
-    @Test
+    @Test(enabled = false, priority = -1)
     public void testGoogle3() throws InterruptedException {
         driver.get("https://www.google.com/");
         String searchTerm = "screen protector";

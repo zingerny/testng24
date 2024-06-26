@@ -1,21 +1,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 
-<suite name="Example Test Suite">
+<suite name="Run specific package">
 
     <!--    suite represents the entire collection of tests that as a whole represent certain category of tests
        such as smoke or regression test suite-->
 
 
     <test name="UI tests">
-        <classes>
-            <class name="demo>
-                <methods>
-                    <include name="testGoogle1"></include>
-                </methods>
-            </class>
+        <packages>
+            <package name="demo">
 
-        </classes>
+            </package>
+
+        </packages>
     </test>
 
 

@@ -9,7 +9,7 @@
 
     <test name="UI tests">
         <classes>
-            <class name="demo.TestNgDemo">
+            <class name="demo">
                 <methods>
                     <include name="testGoogle3"></include>
                 </methods>
