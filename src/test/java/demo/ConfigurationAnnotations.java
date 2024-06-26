@@ -11,6 +11,15 @@ import java.time.Duration;
 
 public class ConfigurationAnnotations {
 
+    @BeforeGroups(groups = "smoke")
+            public void setupGroup(){
+        System.out.println("Smoke test Before Groups setup");
+    }
+    @AfterGroups (groups = "smoke")
+    public void tearDownGroup(){
+        System.out.println("Smoke test After Groups tear down");
+    }
+
 WebDriver driver;
 @BeforeSuite
 public void beforeSuite(){
@@ -21,7 +30,7 @@ public void beforeSuite(){
 public void afterSuite(){
     System.out.println("After Suite: Closing db connection, generate a report");
 }
-    @BeforeMethod
+    @BeforeMethod(alwaysRun =  true)
     public void setUp(){
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -43,7 +52,10 @@ public void afterSuite(){
     public void afterClass(){
         System.out.println("After class");
     }
-    @Test
+
+
+
+    @Test(groups = {"smoke", "flaky"})
     public void testGoogle2() throws InterruptedException {
 
         driver.get("https://www.google.com/");

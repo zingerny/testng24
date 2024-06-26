@@ -9,7 +9,7 @@
 
     <test name="UI tests">
         <classes>
-            <class name="demo>
+            <class name="demo.ConfigurationAnnotations">
                 <methods>
                     <include name="testGoogle1"></include>
                 </methods>
